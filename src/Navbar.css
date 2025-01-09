@@ -1,0 +1,112 @@
+.navbar {
+  background-color: black;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar-item-left {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-item-center {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.navbar-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-item-right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+
+.navbar-image {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.campana-image {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 0px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      padding: 1rem 1rem;
+  }
+
+  .navbar-list {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .navbar-item-left, .navbar-item-right {
+      margin: 0 10px;
+  }
+
+  .navbar-text {
+      font-size: 1.2rem;
+  }
+
+  .navbar-image {
+      width: 25px;
+      height: 25px;
+  }
+
+  .campana-image {
+      width: 30px;
+      height: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+      padding: 1rem 3rem;
+  }
+
+  .navbar-item-left {
+      margin-right: 10px;
+  }
+
+  .navbar-item-right {
+      margin-left: 10px;
+  }
+
+  .navbar-text {
+      font-size: 1.5rem;
+  }
+
+  .navbar-image {
+      width: 40px;
+      height: 40px;
+  }
+}
