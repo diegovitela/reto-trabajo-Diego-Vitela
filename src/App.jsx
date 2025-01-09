@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
 import LoadingPage from './LoadingPage';
 import BlackPage from './BlackPage';
@@ -31,6 +31,7 @@ function App() {
       {location.pathname === '/black-page' && <Navbar />}
       
       <Routes>
+        <Route path="/" element={<Navigate to="/black-page" />} /> {/* Redirige a BlackPage */}
         <Route path="/black-page" element={<BlackPage />} />
         <Route path="/order/:orderId" element={<OrderDetail />} />
         <Route path="/about" element={<div>About Page</div>} />
